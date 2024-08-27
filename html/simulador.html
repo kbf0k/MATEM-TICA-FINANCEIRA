@@ -5,11 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador</title>
     <link rel="stylesheet" href="../css/simulador.css">
-    <script src="../script/simulador.js"></script>
+    <script src="../script/simulador.js" defer></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="html/educacao.html">Educação</a></li>
+                <li><a href="html/simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="container1">
+            <h1>Simulador de Financiamento</h1>
+            
+            <label for="financiamentoTipo">Tipo de Financiamento:</label>
+            <select id="financiamentoTipo">
+                <option value="opcao1">Imobiliário</option>
+                <option value="opcao2">Veicular</option>
+                <option value="opcao3">Empréstimo Pessoal</option>
+                <option value="opcao4">Consórcio</option>
+                <option value="opcao5">Outros</option>
+            </select>
+            
+            <label for="valorTotal">Valor Total (R$):</label>
+            <input type="text" id="valorTotal">
+            
+            <label for="prazoMeses" id="prazotitle">Prazo em Meses:</label>
+            <input type="range" id="prazoMeses" min="1" max="60">
+            <span id="prazoValor">5 meses</span> <!-- Valor inicial com unidade -->
+            
+            <label for="tipoJuros">Tipo de Juros(%):</label>
+            <select id="tipoJuros">
+                <option value="opcao1">Simples</option>
+                <option value="opcao2">Compostos</option>
+            </select>
+
+            <label for="taxaJuros">Taxa do Juros:</label>
+            <input type="text" id="taxaJuros">
+
+            <button type="submit">Calcular</button>
+        </div>
+    </main>
     <footer></footer>
 </body>
 </html>

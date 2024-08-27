@@ -4,66 +4,81 @@
     box-sizing: border-box;
 }
 
-header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-nav{
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(180deg,#002553 60%, black)
-}
-
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.logo img{
-    max-width: 120px;
-}
-
-ul{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-li{
-    list-style-type: none;
-}
-
-li a{
-    margin-left: 50px;
-    margin-right: 50px;
-    color: white;
-    text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 main {
+    width: 100%;
+    height: 110vh;
+    background: linear-gradient(to bottom, #002553, black);
+    color: white;
     display: flex;
     justify-content: center;
 }
 
-section {
-    margin: 50px;
-    width: 60%;
-    height: 500px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+img {
+    width: 200px;
+}
+
+#caixa-principal {
+    width: 54%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     margin-top: 20px;
-    margin-left: 370px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    margin-top:20px;
+    font-family: Calibri;
+}
+
+.banner {
+    width: 200px;
+    height: 200px;
+    margin: 0 50px;
+    border-radius: 100px;
+}
+
+#banners {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+#banner1 {
+    background-color: #19fff4;
+}
+
+#banner2 {
+    background-color: #ffffff;
+}
+
+#banner3 {
+    background-color: #19fff4;
+}
+
+ul {
+    margin-top: 50px;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+#edu-icon {
+    width: 80px;
+    margin: 5px 58px;
+}
+
+h5 {
+    color: black;
+    margin-left: 15px;
+    font-family: Calibri;
+}
+
+#mini-text {
+    font-weight: 200;
 }

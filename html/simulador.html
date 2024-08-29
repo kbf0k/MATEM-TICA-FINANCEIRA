@@ -16,7 +16,7 @@
                 </a>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="gerenciador.html">Home</a></li>
                 <li><a href="educacao.html">Educação</a></li>
                 <li><a href="simulador.html">Simulador</a></li>
             </ul>
@@ -27,7 +27,7 @@
             <h1>Simulador de Financiamento</h1>
             
             <label for="financiamentoTipo">Tipo de Financiamento:</label>
-            <select id="financiamentoTipo">
+            <select id="financiamentoTipo" required>
                 <option value="opcao1">Imobiliário</option>
                 <option value="opcao2">Veicular</option>
                 <option value="opcao3">Empréstimo Pessoal</option>
@@ -36,10 +36,10 @@
             </select>
             
             <label for="valorTotal">Valor Total (R$):</label>
-            <input type="text" id="valorTotal">
+            <input type="number" id="valorTotal" required placeholder="Ex: 1250,00">
             
             <label for="prazoMeses" id="prazotitle">Prazo em Meses:</label>
-            <input type="range" id="prazoMeses" min="1" max="60">
+            <input type="range" id="prazoMeses" min="1" max="60" required>
             <span id="prazoValor">5 meses</span> <!-- Valor inicial com unidade -->
             
             <label for="tipoJuros">Tipo de Juros(%):</label>
@@ -49,7 +49,7 @@
             </select>
 
             <label for="taxaJuros">Taxa do Juros:</label>
-            <input type="text" id="taxaJuros">
+            <input type="number" id="taxaJuros" required placeholder="Ex: 10%">
 
             <button type="submit">Calcular</button>
         </div>

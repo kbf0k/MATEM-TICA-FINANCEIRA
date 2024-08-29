@@ -6,14 +6,14 @@
 
 main {
     width: 100%;
-    height: 110vh;
+    height: 112vh;
     background: linear-gradient(to bottom, #002553, black);
     color: white;
     display: flex;
     justify-content: center;
 }
 
-a img {
+img {
     width: 200px;
 }
 
@@ -34,6 +34,17 @@ p {
     font-family: Calibri;
 }
 
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+}
+
+#banners {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
 .banner {
     width: 200px;
     height: 200px;
@@ -41,23 +52,72 @@ p {
     border-radius: 100px;
 }
 
-#banners {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-}
-
 #banner1 {
-    background-color: #19fff4;
+    background-color: #01FFFF;
 }
 
 #banner2 {
-    background-color: #ffffff;
+    background-color: #01FFFF;
 }
 
 #banner3 {
-    background-color: #19fff4;
+    background-color: #01FFFF;
 }
+
+h5 {
+    color: black;
+    font-family: Calibri;
+}
+
+#gerenc-icon {
+    width: 80px;
+    margin: 5px 60px;
+}
+
+#sim-icon {
+    width: 80px;
+    margin: 5px 60px;
+}
+
+#edu-icon {
+    width: 80px;
+    margin: 5px 60px;
+}
+
+.mini-title {
+    font-weight: 800;
+    text-align: center;
+}
+
+.mini-text {
+    font-weight: 400;
+    text-align: center;
+}
+
+#mini-title-gerenc {
+    margin: 0 30px;
+}
+
+#mini-text-gerenc {
+    margin: 2px 25px;
+}
+
+#mini-title-sim {
+    margin: 0 38px;
+}
+
+#mini-text-sim {
+    margin: 2px 25px;
+}
+
+#mini-title-edu {
+    margin: 0 15px;
+}
+
+#mini-text-edu {
+    margin: 2px 25px;
+}
+
 
 ul {
     margin-top: 50px;
@@ -66,19 +126,4 @@ ul {
 li {
     list-style-type: none;
     margin-bottom: 10px;
-}
-
-#edu-icon {
-    width: 80px;
-    margin: 5px 58px;
-}
-
-h5 {
-    color: black;
-    margin-left: 15px;
-    font-family: Calibri;
-}
-
-#mini-text {
-    font-weight: 200;
 }

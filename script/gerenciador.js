@@ -57,7 +57,8 @@ function submeter(e){
          number: document.getElementById('number').value,
          date: document.getElementById('date').value,
     }
-    insertUsuario(render());
+    insertUsuario(textUsuario, number, date);
+    render();
     document.getElementById('modal-container').classList.remove('mostrar');
 }
 

@@ -192,7 +192,7 @@ th {
     font-weight: bold;
 }
 
-td img {
+td img,svg {
     max-width: 25px;
     cursor: pointer;
 }
@@ -279,7 +279,7 @@ footer p {
 
 #modal-container,
 .modal-container {
-    transition: all 0.5s ease-in-out;
+    animation: animate-modal 0.2s;
 }
 
 .mostrar #modal {
@@ -338,25 +338,21 @@ input[type="text"] {
     color: #d9534f;
     background-color: transparent;
     border: 2px solid #d9534f;
-    transition: all ease-in-out 0.2s;
 }
 
 .button-group #close-modal:hover {
     background-color: #d9534f;
     color: white;
-    transition: all ease-in-out 0.2s;
 }
 
 .button-group #save-modal {
     color: white;
     background-color: #0000FE;
     border: 2px solid #0000FE;
-    transition: all ease-in-out 0.2s;
 }
 
 .button-group #save-modal:hover {
     transform: scale(1.05);
-    transition: all ease-in-out 0.2s;
 }
 
 @keyframes animate-modal {

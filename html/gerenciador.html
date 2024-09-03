@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="../css/gerenciador.css">
     <script src="../script/gerenciador.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
 
 <body>
@@ -55,7 +56,7 @@
                     <img id="open-modal" onclick="openModal()" src="../img/mais.svg" alt="">
                     <p>Nova Transição</p>
                 </div>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -90,14 +91,14 @@
                 <label for="description">Descrição de Entrada</label>
 
                 <div class="form-instrucao">
-                    <input type="text" name="text" id="textUsuario">
+                    <input type="text" name="text" id="textUsuario" required>
                     <p>Descreva o objetivo da transação ex...(Casa,Trabalho,Financeiro)</p>
                 </div>
                 
                 <label for="number">Valor</label>
 
                 <div class="form-instrucao">
-                    <input type="number" name="number" id="number" placeholder="R$0,00">
+                    <input type="number" name="number" id="number" placeholder="R$0,00" required>
                     <p>Use o sinal- (MENOS) para inserir uma despesa e use, (VIRGULA) para casas
                         decimais</p>
                 </div>

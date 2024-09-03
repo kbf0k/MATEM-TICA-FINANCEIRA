@@ -20,11 +20,12 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
 }
 
 .logo img{
     max-width: 120px;
+    margin-right: 35px;
+    margin-top: 10px;
 }
 
 ul{
@@ -37,17 +38,29 @@ li{
     list-style-type: none;
 }
 
-li a{
+li a {
     margin-left: 50px;
     margin-right: 50px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all ease-in-out 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li a:hover {
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.10);
+    transition: all ease-in-out 0.2s;
 }
 
 main {
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
 section {

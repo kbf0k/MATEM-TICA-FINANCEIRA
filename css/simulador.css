@@ -68,7 +68,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 15px;
+    margin-top: 10px;
     max-width: 600px; 
     width: 100%;
     padding: 20px; 
@@ -130,3 +130,25 @@ button {
 button:hover {
     background-color: #2d7be1;
 }
+#resultados{
+    margin-left: 40px;
+}
+#resultados h2{
+    padding-bottom: 10px;
+}
+#resultados h4{
+    padding-bottom: 10px;
+}
+#jurospagos{
+    padding-bottom: 5px;
+}
+canvas {
+    max-width: 600px; 
+    height: 600px; 
+    margin: 0 auto; 
+    display: block; 
+    background-color: white;
+    color: black;
+}
+
+

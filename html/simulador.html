@@ -6,6 +6,7 @@
     <title>Simulador</title>
     <link rel="stylesheet" href="../css/simulador.css">
     <script src="../script/simulador.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -51,7 +52,14 @@
             <label for="taxaJuros">Taxa do Juros:</label>
             <input type="number" id="taxaJuros" required placeholder="Ex: 10%">
 
-            <button type="submit">Calcular</button>
+            <button type="submit" id="calcularBtn">Calcular</button>
+        </div>
+        <div id="resultados">
+            <h2>Resultados da simulação</h2> 
+            <h4>Valor da Parcela :</h4>
+            <h4>Custo Total do Crédito:</h4>
+            <h4 id="jurospagos">Total de Juros Pagos :</h4>
+            <canvas id="lineChart"></canvas>
         </div>
     </main>
     <footer></footer>

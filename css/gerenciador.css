@@ -303,6 +303,7 @@ input[type="text"] {
     padding: 10px;
     margin: 5px 0 5px;
     width: 50%;
+    border: 1px solid black;
 }
 
 .form-instrucao p {
@@ -316,6 +317,7 @@ input[type="text"] {
 .form-group input[type=date] {
     padding: 10px;
     margin: 5px 0 5px;
+    border: 1px solid black;
 }
 
 .button-group {
@@ -437,6 +439,7 @@ input[type="text"] {
 .form input {
     padding: 10px;
     margin: 5px 0 5px;
+    border: 1px solid black;
 }
 
 .button-group {

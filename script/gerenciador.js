@@ -1,3 +1,8 @@
+let listaRegistros = {
+    ultimoIdGerado:0,
+    usuarios:[]
+}
+
 function openModal() {
     document.getElementById("modal-container").classList.add("mostrar");
 }
@@ -55,28 +60,30 @@ function render() {
 }
 
 
-function calcular(){
-    let entrada = 0
-    let saida = 0
-    
+function calcular() {
+    let entrada = 0;
+    let saida = 0;
+    let total = 0;
+
     listaRegistros.usuarios.forEach(usuario => {
-        const numero = parseInt(usuario.number)
+        const numero = parseFloat(usuario.number);
         
-        if (numero >= 0){
-            entrada += numero
-        }
-        else{
-            saida += numero
+        if (numero >= 0) {
+            entrada += numero;
+        } else {
+            saida += Math.abs(numero); 
         }
     });
-    
-    
-    let total = entrada - saida
 
-    document.getElementById("entrada").textContent = `R$ ${entrada.toFixed(2)}`
-    document.getElementById("saida").textContent = `R$ ${saida.toFixed(2)}`
-    document.getElementById("total").textContent = `R$ ${total.toFixed(2)}`
+    total = entrada - saida;
+
+    document.getElementById("entrada").textContent = `+R$${entrada.toFixed(2)}`;
+    document.getElementById("saida").textContent = `-R$${saida.toFixed(2)}`;
+    document.getElementById("total").textContent = `R$ ${total.toFixed(2)}`;
+    document.getElementById("entrada").style.color = 'green'
+    document.getElementById("saida").style.color = 'red'
 }
+
 
 
 function insertUsuario(textUsuario, number, date) {
@@ -114,20 +121,20 @@ function salvarEdicao() {
 
 function deletar(index) {
     Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
+        title: "Você tem certeza?",
+        text: "Não será possivel reverter isso!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
+        confirmButtonText: "Sim, Deletar!"
     }).then((result) => {
         if (result.isConfirmed) {
             listaRegistros.usuarios.splice(index, 1)
 
             Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
+                title: "Deletado!",
+                text: "Sua tabela foi Deletada",
                 icon: "success"
             });
             gravarBD();

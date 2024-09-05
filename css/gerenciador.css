@@ -227,18 +227,6 @@ footer p {
 }
 
 /* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
 
 .modal-container {
     width: 100vw;
@@ -372,19 +360,6 @@ input[type="text"] {
     }
 }
 
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
-/* MODAL */
 /* MODAL */
 
 .modal-container2 {
@@ -532,4 +507,244 @@ input[type="text"] {
 
 .mostrar #modal2 {
     animation: animate-modal 0.2s;
+}
+
+@media (max-width: 599px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li a {
+        margin: 10px 0;
+    }
+
+    .div-box {
+        margin-top: 0;
+    }
+
+    .box, .boxred {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .container2 {
+        padding: 20px;
+    }
+
+    .titulo {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    #modal, #modal2 {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .form-group input[type="number"], input[type="text"], .form-group input[type=date] {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        height: 300px;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    li a {
+        margin: 20px;
+    }
+
+    .box, .boxred {
+        width: 80%;
+    }
+
+    .container2 {
+        padding: 40px;
+    }
+
+    .titulo {
+        margin-left: 100px;
+    }
+
+    table {
+        width: 90%;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        height: 350px;
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+
+    li a {
+        margin: 30px;
+    }
+
+    .box, .boxred {
+        width: 300px;
+    }
+
+    .container2 {
+        padding: 110px;
+    }
+
+    .titulo {
+        margin-left: 190px;
+    }
+
+    table {
+        width: 80%;
+        margin-left: 180px;
+    }
+}
+
+@media (max-width: 599px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav {
+        height: auto;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    li a {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .div-box {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box, .boxred {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .container2 {
+        padding: 20px;
+    }
+
+    .titulo {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .titulo img {
+        max-width: 30px;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer img {
+        max-width: 30px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    #modal, #modal2 {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .form-group input[type="number"], input[type="text"], .form-group input[type=date] {
+        width: 100%;
+    }
+
+    .button-group button {
+        width: 100%;
+        font-size: 14px;
+    }
 }

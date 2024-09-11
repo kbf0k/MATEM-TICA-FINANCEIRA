@@ -36,15 +36,14 @@
                 <option value="opcao5">Outros</option>
             </select>
             
-            <label for="valorTotal">Valor Total (R$):</label>
+            <label for="valorTotal">Valor Inicial (R$):</label>
             <input type="number" id="valorTotal" required placeholder="Ex: 1250,00">
             
             <label for="prazoMeses" id="prazotitle">Prazo em Meses:</label>
-            <input type="range" id="prazoMeses" min="1" max="60" required>
-            <span id="prazoValor">5 meses</span> <!-- Valor inicial com unidade -->
-            
+            <input type="range" id="prazoMeses" min="1" max="60" value="1"    required>
+            <span id="prazoValor">1 mês</span> 
             <label for="tipoJuros">Tipo de Juros(%):</label>
-            <select id="tipoJuros">
+            <select id="tipoJuros" required>
                 <option value="opcao1">Simples</option>
                 <option value="opcao2">Compostos</option>
             </select>
@@ -52,16 +51,26 @@
             <label for="taxaJuros">Taxa do Juros:</label>
             <input type="number" id="taxaJuros" required placeholder="Ex: 10%">
 
-            <button type="submit" id="calcularBtn">Calcular</button>
+            <button type="submit" id="calcular">Calcular</button>
         </div>
         <div id="resultados">
+         <div id="textoresultado">
             <h2>Resultados da simulação</h2> 
             <h4>Valor da Parcela :</h4>
             <h4>Custo Total do Crédito:</h4>
             <h4 id="jurospagos">Total de Juros Pagos :</h4>
-            <canvas id="lineChart"></canvas>
+        </div>
+            <canvas id="lineChart" style="display: none;"></canvas>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <img src="../img/facebook.png" alt="">
+        <img src="../img/twitter.png" alt="">
+        <img src="../img/linkedin.png" alt="">
+        <img src="../img/instagram.png" alt="">
+        <img src="../img/youtube.png" alt="">
+
+        <p>Delevoped By SoftDev</p>
+    </footer>
 </body>
 </html>

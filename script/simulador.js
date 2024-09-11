@@ -1,10 +1,10 @@
-
+let chartInstance; 
 document.getElementById('prazoMeses').addEventListener('input', function() {
     const prazoMeses = document.getElementById('prazoMeses').value;
-    document.getElementById('prazoValor').textContent = prazoMeses + ' meses';
+    document.getElementById('prazoValor').textContent = prazoMeses + (prazoMeses == 1 ? ' mês' : ' meses');
 });
 
-document.getElementById('calcularBtn').addEventListener('click', function(event) {
+document.getElementById('calcular').addEventListener('click', function(event) {
     event.preventDefault();
 
     const valorTotal = parseFloat(document.getElementById('valorTotal').value);
@@ -13,16 +13,31 @@ document.getElementById('calcularBtn').addEventListener('click', function(event)
     const taxaJuros = parseFloat(document.getElementById('taxaJuros').value) / 100;
 
     const saldoDevedor = [];
-    for (let i = 0; i < prazoMeses; i++) {
-        const saldo = valorTotal - ((valorTotal / prazoMeses) * i);
-        saldoDevedor.push(saldo.toFixed(2));
+
+    if (tipoJuros === 'opcao1') { 
+        for (let i = 0; i < prazoMeses; i++) {
+            const saldo = valorTotal * (1 + taxaJuros * (i + 1)); 
+            saldoDevedor.push(saldo.toFixed(2));
+        }
+    } else if (tipoJuros === 'opcao2') { 
+        for (let i = 0; i < prazoMeses; i++) {
+            const saldo = valorTotal * Math.pow(1 + taxaJuros, i + 1); 
+            saldoDevedor.push(saldo.toFixed(2));
+        }
     }
 
+    document.getElementById('textoresultado').style.display = 'block';
+
     const ctx = document.getElementById('lineChart').getContext('2d');
-    new Chart(ctx, {
+
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+    document.getElementById('lineChart').style.display = 'block';
+    chartInstance = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: Array.from({length: prazoMeses}, (v, k) => `Mês ${k + 1}`),
+            labels: Array.from({ length: prazoMeses }, (v, k) => `Mês ${k + 1}`),
             datasets: [{
                 label: 'Saldo Devedor',
                 data: saldoDevedor,

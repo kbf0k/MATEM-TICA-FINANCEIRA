@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -121,33 +122,32 @@ main {
     margin-bottom: 40px;
 }
 
-.boxred {
+#boxred {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     width: 300px;
     height: 100px;
-    background-color: rgb(180, 37, 37);
+    background-color: white;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
     border-radius: 2px;
     margin-left: 20px;
     margin-right: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: white;
 }
 
-.boxred:hover {
+#boxred:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.boxred p {
+#boxred p {
     font-size: 16px;
     text-align: center;
 }
 
-.boxred img {
+#boxred img {
     max-width: 50px;
     margin-bottom: 40px;
     display: block;

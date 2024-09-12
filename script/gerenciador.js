@@ -1,6 +1,6 @@
 let listaRegistros = {
-    ultimoIdGerado:0,
-    usuarios:[]
+    ultimoIdGerado: 0,
+    usuarios: []
 }
 
 function openModal() {
@@ -41,7 +41,7 @@ function render() {
             const numero = parseFloat(usuario.number);
             const estilo = numero < 0 ? 'style="color: red;"' : 'style="color: green;"';
             var numeroFormatado = numero >= 0 ? `+R$${Math.abs(numero).toFixed(2)}` : `-R$${Math.abs(numero).toFixed(2)}`;
-            
+
             return `
             <tr>
                 <td>${usuario.textUsuario}</td>
@@ -67,15 +67,31 @@ function calcular() {
 
     listaRegistros.usuarios.forEach(usuario => {
         const numero = parseFloat(usuario.number);
-        
+
         if (numero >= 0) {
             entrada += numero;
         } else {
-            saida += Math.abs(numero); 
+            saida += Math.abs(numero);
         }
     });
 
     total = entrada - saida;
+
+    if (total < 0) {
+        document.getElementById("boxred").style.backgroundColor = 'red'
+        document.getElementById("total").style.color = 'white'
+        document.getElementById("total2").style.color = 'white'
+    }
+    else if (total > 0) {
+        document.getElementById("boxred").style.backgroundColor = 'green'
+        document.getElementById("total").style.color = 'white'
+        document.getElementById("total2").style.color = 'white'
+    }
+    else {
+        document.getElementById("boxred").style.backgroundColor = 'white'
+        document.getElementById("total").style.color = 'black'
+        document.getElementById("total2").style.color = 'black'
+    }
 
     document.getElementById("entrada").textContent = `+R$${entrada.toFixed(2)}`;
     document.getElementById("saida").textContent = `-R$${saida.toFixed(2)}`;
@@ -142,7 +158,6 @@ function deletar(index) {
             render();
         }
     });
-
 }
 
 function limparEdicao() {

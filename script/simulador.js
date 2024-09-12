@@ -12,19 +12,35 @@ document.getElementById('calcular').addEventListener('click', function(event) {
     const tipoJuros = document.getElementById('tipoJuros').value;
     const taxaJuros = parseFloat(document.getElementById('taxaJuros').value) / 100;
 
-    const saldoDevedor = [];
+    let saldoDevedor = [];
+    let valorParcela = 0;
+    let custoTotal = 0;
+    let jurosPagos = 0;
 
-    if (tipoJuros === 'opcao1') { 
+    if (tipoJuros === 'opcao1') { // Juros Simples
+        jurosPagos = valorTotal * taxaJuros * prazoMeses;
+        custoTotal = valorTotal + jurosPagos;
+        valorParcela = custoTotal / prazoMeses;
+
         for (let i = 0; i < prazoMeses; i++) {
             const saldo = valorTotal * (1 + taxaJuros * (i + 1)); 
             saldoDevedor.push(saldo.toFixed(2));
         }
-    } else if (tipoJuros === 'opcao2') { 
+        document.querySelector("#textoresultado h4:nth-of-type(1)").style.display = 'block';
+        document.querySelector("#textoresultado h4:nth-of-type(1)").textContent = `Valor da Parcela: R$ ${valorParcela.toFixed(2)}`;
+    } else if (tipoJuros === 'opcao2') { // Juros Compostos
+        custoTotal = valorTotal * Math.pow(1 + taxaJuros, prazoMeses);
+        jurosPagos = custoTotal - valorTotal;
+        valorParcela = custoTotal / prazoMeses;
+
         for (let i = 0; i < prazoMeses; i++) {
             const saldo = valorTotal * Math.pow(1 + taxaJuros, i + 1); 
             saldoDevedor.push(saldo.toFixed(2));
         }
+        document.querySelector("#textoresultado h4:nth-of-type(1)").style.display = 'none';
     }
+    document.querySelector("#textoresultado h4:nth-of-type(2)").textContent = `Custo Total do Crédito: R$ ${custoTotal.toFixed(2)}`;
+    document.querySelector("#textoresultado h4:nth-of-type(3)").textContent = `Total de Juros Pagos: R$ ${jurosPagos.toFixed(2)}`;
 
     document.getElementById('textoresultado').style.display = 'block';
 

@@ -127,14 +127,15 @@ function deletar(index) {
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Sim, Deletar!"
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Sim, remover!"
     }).then((result) => {
         if (result.isConfirmed) {
             listaRegistros.usuarios.splice(index, 1)
 
             Swal.fire({
-                title: "Deletado!",
-                text: "Sua tabela foi Deletada",
+                title: "Removido!",
+                text: "Sua transação foi removida",
                 icon: "success"
             });
             gravarBD();

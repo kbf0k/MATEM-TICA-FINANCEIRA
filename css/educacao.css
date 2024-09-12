@@ -166,3 +166,21 @@ video {
     margin-bottom: 90px;
     background-color: #f4f4f9;
 }
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(360deg, #002553 45%, rgb(0, 0, 0));
+}
+
+footer img {
+    margin: 10px;
+    filter: invert(1)
+}
+
+footer p {
+    margin-top: 5px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}

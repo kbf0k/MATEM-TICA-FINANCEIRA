@@ -32,18 +32,25 @@ main {
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
+    justify-content: center;
 }
 
 #caixa-principal img {
     width: 300px;
 }
 
+#caixa-principal p {
+
+}
+
 h1:last-of-type {
     margin-top: 20px;
 }
 
+
 .texto {
     max-width: 600px;
+
 }
 
 h1 {

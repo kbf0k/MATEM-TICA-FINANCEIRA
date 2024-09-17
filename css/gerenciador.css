@@ -308,6 +308,17 @@ input[type="text"] {
     border: 1px solid black;
 }
 
+.form-group input[type=radio] {
+    padding: 10px;
+    margin: 5px 0 5px;
+    border: 1px solid black;
+    width: 5%;
+}
+
+.form-instrucao label {
+    font-size: 14px;
+}
+
 .button-group {
     display: flex;
     justify-content: center;
@@ -382,7 +393,7 @@ input[type="text"] {
     transform: translate(-50%, -50%);
     z-index: 10;
     width: 700px;
-    height: 480px;
+    height: 530px;
     max-width: 90%;
     padding: 70px;
     border-radius: 0.5rem;
@@ -442,7 +453,7 @@ input[type="text"] {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-group input[type=date] {
+.form-instrucao input[type=date] {
     padding: 10px;
     margin: 5px 0 5px;
     border: 1px solid black;
@@ -685,7 +696,7 @@ input[type="text"] {
         align-items: center;
     }
 
-    .box, .boxred {
+    .box, #boxred {
         width: 90%;
         height: auto;
         margin: 10px 0;

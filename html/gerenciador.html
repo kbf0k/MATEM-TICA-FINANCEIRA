@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt- ">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="container">
             <div class="div-box">
@@ -38,7 +39,7 @@
                 </div>
                 <div class="box">
                     <div class="texto">
-                        <p>Saida</p>
+                        <p>Saída</p>
                         <p id="saida">R$0,00</p>
                     </div>
                     <img src="../img/expense.svg" alt="">
@@ -55,7 +56,7 @@
             <div class="div-table">
                 <div class="titulo">
                     <img id="open-modal" onclick="openModal()" src="../img/mais.svg" alt="">
-                    <p>Nova Transição</p>
+                    <p>Nova Transação</p>
                 </div>
 
                 <table>
@@ -72,41 +73,38 @@
             </div>
         </div>
     </main>
+
     <footer>
         <img src="../img/facebook.png" alt="">
         <img src="../img/twitter.png" alt="">
         <img src="../img/linkedin.png" alt="">
         <img src="../img/instagram.png" alt="">
         <img src="../img/youtube.png" alt="">
-
-        <p>Delevoped By SoftDev</p>
+        <p>Developed by SoftDev</p>
     </footer>
 
-    <!-- NOVA TRANSAÇÃO -->
-
+    <!-- Modal Nova Transação -->
     <form id="modal-container" class="modal-container">
         <div id="modal">
             <h1>Nova Transação</h1>
-
             <div class="form-group">
-
-                <label for="description">Descrição da transação</label>
-
+                <label for="description">Descrição da Transação</label>
                 <div class="form-instrucao">
-                    <input type="text" name="text" id="textUsuario" required>
-                    <p>Descreva o objetivo da transação ex...(Casa,Trabalho,Financeiro)</p>
+                    <input type="text" id="textUsuario" required>
+                    <p>Descreva o objetivo da transação (ex: Casa, Trabalho, Financeiro)</p>
                 </div>
-
                 <label for="number">Valor</label>
-
                 <div class="form-instrucao">
-                    <input type="number" name="number" id="number" placeholder="R$0,00" required>
-                    <p>Use o sinal - (MENOS) para inserir uma despesa e use, (VIRGULA) para casas
-                        decimais</p>
+                    <input type="number" id="number" placeholder="R$0,00" required>
                 </div>
-
-                <input type="date" name="date" id="date">
-
+                <div class="form-instrucao">
+                    <label for="radioEntrada">Entrada</label><input type="radio" id="radio-entrada" name="radio" value="entrada">
+                    <label for="radioSaida">Saída</label><input type="radio" id="radio-saida" name="radio" value="saida">
+                </div>
+                <label for="date">Data</label>
+                <div class="form-instrucao">
+                    <input type="date" id="date" required>
+                </div>
             </div>
             <div class="button-group">
                 <button id="close-modal" type="button">Cancelar</button>
@@ -115,30 +113,27 @@
         </div>
     </form>
 
-    <!-- EDITAR -->
-
+    <!-- Modal Editar Transação -->
     <form id="modal-container2" class="modal-container2">
         <div id="modal2">
             <h1>Editar Transação</h1>
-
             <div class="form-group">
-                <input type="hidden" id="indexEditando" value="">
-
+                <input type="hidden" id="indexEditando">
                 <label for="editTextUsuario">Descrição da Transação</label>
-
                 <div class="form-instrucao">
-                    <input type="text" name="text" id="editTextUsuario" required>
+                    <input type="text" id="editTextUsuario" required>
                 </div>
-
                 <label for="editNumber">Valor</label>
                 <div class="form-instrucao">
-                    <input type="number" name="number" id="editNumber" placeholder="R$0,00" required>
+                    <input type="number" id="editNumber" placeholder="R$0,00" required>
                 </div>
-
-                <label for="editeDate">Data</label>
-
                 <div class="form-instrucao">
-                    <input type="date" name="date" id="editDate" required>
+                    <label for="editEntrada">Entrada</label><input type="radio" name="editRadio" value="entrada" id="editEntrada">
+                    <label for="editSaida">Saída</label><input type="radio" name="editRadio" value="saida" id="editSaida">
+                </div>
+                <label for="editDate">Data</label>
+                <div class="form-instrucao">
+                    <input type="date" id="editDate" required>
                 </div>
             </div>
             <div class="button-group">

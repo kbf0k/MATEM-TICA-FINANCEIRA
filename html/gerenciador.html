@@ -88,6 +88,8 @@
         <div id="modal">
             <h1>Nova Transação</h1>
             <div class="form-group">
+                <input type="hidden" id="indexEditando" value="">
+
                 <label for="description">Descrição da Transação</label>
                 <div class="form-instrucao">
                     <input type="text" id="textUsuario" required>
@@ -98,8 +100,10 @@
                     <input type="number" id="number" placeholder="R$0,00" required>
                 </div>
                 <div class="form-instrucao">
-                    <label for="radioEntrada">Entrada</label><input type="radio" id="radio-entrada" name="radio" value="entrada">
-                    <label for="radioSaida">Saída</label><input type="radio" id="radio-saida" name="radio" value="saida">
+                    <select name="select" id="select">
+                        <option value="entrada">Entrada</option>
+                        <option value="saida">Saida</option>
+                    </select>
                 </div>
                 <label for="date">Data</label>
                 <div class="form-instrucao">
@@ -116,9 +120,9 @@
     <!-- Modal Editar Transação -->
     <form id="modal-container2" class="modal-container2">
         <div id="modal2">
+            <input type="hidden" id="indexEditando" value="">
             <h1>Editar Transação</h1>
             <div class="form-group">
-                <input type="hidden" id="indexEditando">
                 <label for="editTextUsuario">Descrição da Transação</label>
                 <div class="form-instrucao">
                     <input type="text" id="editTextUsuario" required>
@@ -128,8 +132,10 @@
                     <input type="number" id="editNumber" placeholder="R$0,00" required>
                 </div>
                 <div class="form-instrucao">
-                    <label for="editEntrada">Entrada</label><input type="radio" name="editRadio" value="entrada" id="editEntrada">
-                    <label for="editSaida">Saída</label><input type="radio" name="editRadio" value="saida" id="editSaida">
+                    <select name="editSelect" id="editSelect">
+                        <option value="entrada">Entrada</option>
+                        <option value="saida">Saida</option>
+                    </select>
                 </div>
                 <label for="editDate">Data</label>
                 <div class="form-instrucao">

@@ -23,13 +23,40 @@ function lerBD() {
 
 function editar(index) {
     const usuario = listaRegistros.usuarios[index];
+    const tipoTransacao = usuario.number >= 0 ? 'entrada' : 'saida';
     if (usuario) {
         document.getElementById('editTextUsuario').value = usuario.textUsuario;
-        document.getElementById('editNumber').value = Math.abs(usuario.number); // Ajustar valor absoluto para edição
-        document.querySelector(`input[name=radio][value=${usuario.number >= 0 ? 'entrada' : 'saida'}]`).checked = true;
+        document.getElementById('editNumber').value = Math.abs(usuario.number);
         document.getElementById('editDate').value = usuario.date;
+        
+        document.getElementById('editSelect').value = tipoTransacao;
         document.getElementById('indexEditando').value = index;
+
         document.getElementById('modal-container2').classList.add('mostrar');
+    }
+}
+
+function salvarEdicao() {
+    const index = parseInt(document.getElementById('indexEditando').value, 10);
+
+    if (!isNaN(index)) {
+        const valorEditado = parseFloat(document.getElementById('editNumber').value)
+        const tipoTransacao = document.getElementById('editSelect').value
+        const valorFinal = tipoTransacao === 'entrada' ? Math.abs(valorEditado) : -Math.abs(valorEditado)
+
+
+        listaRegistros.usuarios[index] = {
+            textUsuario: document.getElementById('editTextUsuario').value,
+            number: valorFinal,
+            valores: tipoTransacao,
+            date: document.getElementById('editDate').value
+        };
+
+        limparEdicao();
+        gravarBD();
+        render();
+
+        document.getElementById('modal-container2').classList.remove('mostrar');
     }
 }
 
@@ -97,7 +124,7 @@ function calcular() {
 
 function insertUsuario(textUsuario, number, date, valores) {
     let valor = parseFloat(number);
-    valor = valores === 'entrada' ? valor : -valor;
+    valor = valores === 'entrada' ? Math.abs(valor) : -Math.abs(valor);
 
     listaRegistros.ultimoIdGerado++;
     listaRegistros.usuarios.push({ textUsuario, number: valor, date, valores });
@@ -109,26 +136,6 @@ function insertUsuario(textUsuario, number, date, valores) {
     document.getElementById("modal-container").classList.remove("mostrar");
 }
 
-function salvarEdicao() {
-    const index = parseInt(document.getElementById('indexEditando').value, 10);
-
-    if (!isNaN(index)) {
-        listaRegistros.usuarios[index] = {
-            textUsuario: document.getElementById('editTextUsuario').value,
-            number: (document.querySelector('input[name=radio]:checked').value === 'entrada' ? 
-                    parseFloat(document.getElementById('editNumber').value) : 
-                    -parseFloat(document.getElementById('editNumber').value)),
-            valores: document.querySelector('input[name=radio]:checked').value,
-            date: document.getElementById('editDate').value
-        };
-
-        limparEdicao();
-        gravarBD();
-        render();
-
-        document.getElementById('modal-container2').classList.remove('mostrar');
-    }
-}
 
 function deletar(index) {
     Swal.fire({
@@ -162,8 +169,6 @@ function limparEdicao() {
 
     document.getElementById("editTextUsuario").value = "";
     document.getElementById("editNumber").value = "";
-    document.querySelector('input[name=radio][value="entrada"]').checked = false;
-    document.querySelector('input[name=radio][value="saida"]').checked = false;
     document.getElementById("editDate").value = "";
 }
 
@@ -175,7 +180,7 @@ window.addEventListener('load', () => {
 
         const textUsuario = document.getElementById('textUsuario').value;
         const number = document.getElementById('number').value;
-        const valores = document.querySelector('input[name=radio]:checked').value;
+        const valores = document.getElementById('select').value;
         const date = document.getElementById('date').value;
 
         if (textUsuario && number && date && valores) {
@@ -194,20 +199,5 @@ window.addEventListener('load', () => {
 
     document.getElementById("close-modal2").addEventListener("click", () => {
         document.getElementById("modal-container2").classList.remove("mostrar");
-    });
-});
-
-document.querySelectorAll('input[name="radio"]').forEach((radio) => {
-    radio.addEventListener('change', (e) => {
-        const numberInput = document.getElementById('number');
-        let valorAtual = parseFloat(numberInput.value) || 0; // Obter o valor atual ou 0 se vazio
-
-        if (e.target.value === 'entrada') {
-            // Se for entrada, o valor deve ser positivo
-            numberInput.value = Math.abs(valorAtual);
-        } else if (e.target.value === 'saida') {
-            // Se for saída, o valor deve ser negativo
-            numberInput.value = -Math.abs(valorAtual);
-        }
     });
 });

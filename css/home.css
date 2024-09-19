@@ -43,7 +43,7 @@ h1:last-of-type {
 
 .texto {
     max-width: 600px;
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 h1 {
@@ -270,7 +270,8 @@ li h5 {
     }
 
     .autor-frase {
-        width: 120px; /* Ajusta o tamanho da foto do autor */
-        height: 120px; /* Ajusta o tamanho da foto do autor */
+        border-radius: 50%;
+        width: 15%;
+        aspect-ratio: 4/3.5;
     }
 }

@@ -46,6 +46,7 @@ ul {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-right: 45px;
 }
 
 li {
@@ -679,6 +680,7 @@ input[type="text"] {
         flex-direction: column;
         align-items: center;
         padding: 0;
+        margin: 0;
     }
 
     li {
@@ -748,4 +750,8 @@ input[type="text"] {
         width: 100%;
         font-size: 14px;
     }
+}
+
+#select{
+    border: 1px solid black;
 }

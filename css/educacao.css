@@ -47,6 +47,7 @@ ul {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-right: 45px;
 }
 
 li {
@@ -411,7 +412,7 @@ p {
     ul {
         flex-direction: column;
         align-items: center;
-        margin-top: 0;
+        margin: 0;
     }
 
     li {

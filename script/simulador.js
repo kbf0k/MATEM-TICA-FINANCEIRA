@@ -31,10 +31,10 @@ document.getElementById('calcular').addEventListener('click', function(event) {
         return; 
     }
 
-    if (taxaJuros > 0.60) {
+    if (taxaJuros > 0.15) {
         Swal.fire({
             icon: "warning",
-            title: "A taxa de juros deve ser inferior a 60%",
+            title: "A taxa de juros deve ser inferior a 15%",
             text: "Tente Novamente!",
         });
         return; 

@@ -98,7 +98,7 @@ li a:hover {
 
 .card h3 {
     font-size: 20px;
-    color: #00bfa5;
+    color: rgba(0, 37, 83, 0.8);
     margin-bottom: 10px;
 }
 
@@ -115,7 +115,7 @@ li a:hover {
 
 
 h2 {
-    color: #00bfa5;
+    color: rgba(0, 37, 83, 0.8);
     text-align: center;
     margin-top: 40px;
 }
@@ -148,7 +148,7 @@ h2 {
 .cta-button {
     display: block;
     margin: 30px auto;
-    background-color: #00bfa5;
+    background-color: rgba(0, 37, 83, 0.8);
     color: white;
     padding: 15px 30px;
     border: none;
@@ -167,7 +167,7 @@ h2 {
 }
 
 .resources h2 {
-    color: #00bfa5;
+    color: rgba(0, 37, 83, 0.8);
     font-size: 30px;
     margin-bottom: 10px;
 }
@@ -194,7 +194,7 @@ h2 {
 }
 
 .resource-item i {
-    color: #00bfa5;
+    color: rgba(0, 37, 83, 0.8);
     margin-right: 20px;
 }
 
@@ -336,7 +336,7 @@ p {
 }
 
 .card i, .resource-item i {
-    color: #00bfa5;
+    color: rgba(0, 37, 83, 0.8);
 }
 
 .video-grid {
@@ -393,5 +393,33 @@ p {
         width: 40px;
         height: 40px;
         font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav {
+        height: 250px;
+    }
+    .logo img {
+        margin-right: 0;
+        max-width: 100px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    li a {
+        margin: 0;
+        font-size: 16px;
     }
 }

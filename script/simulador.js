@@ -24,7 +24,7 @@ document.getElementById('calcular').addEventListener('click', function(event) {
 
     if (isNaN(valorTotal) || isNaN(prazoMeses) || isNaN(taxaJuros) || !tipoJuros) {
         Swal.fire({
-            icon: "error",
+            icon: "warning",
             title: "Alguns dos campos não foram preenchidos",
             text: "Volte para inserir os dados novamente!",
         });
@@ -33,7 +33,7 @@ document.getElementById('calcular').addEventListener('click', function(event) {
 
     if (taxaJuros > 0.60) {
         Swal.fire({
-            icon: "error",
+            icon: "warning",
             title: "A taxa de juros deve ser inferior a 60%",
             text: "Tente Novamente!",
         });

@@ -213,3 +213,64 @@ li h5 {
 #titulo-frases {
     margin-top: 60px;
 }
+@media (max-width: 768px) {
+    #caixa-principal {
+        width: 90%; /* Ajusta a largura do container principal */
+        padding: 10px; /* Reduz o padding */
+    }
+
+    #caixa-principal img {
+        width: 80%; /* Faz a imagem se ajustar à largura do container */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Diminui o tamanho da fonte do título */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Diminui o tamanho da fonte do subtítulo */
+    }
+
+    p {
+        font-size: 16px; /* Diminui o tamanho da fonte do parágrafo */
+    }
+
+    #banners {
+        flex-direction: column; /* Muda a direção dos banners para coluna */
+        align-items: center; /* Centraliza os banners */
+    }
+
+    .banner {
+        width: 100%; /* Faz os banners ocuparem 100% da largura */
+        max-width: 300px; /* Limita a largura máxima para uma melhor aparência */
+        margin-bottom: 20px; /* Adiciona espaço entre os banners */
+    }
+
+    .texto {
+        margin-left: 0; /* Remove a margem à esquerda */
+        margin-right: 0; /* Remove a margem à direita */
+    }
+
+    .link {
+        padding: 8px 12px; /* Ajusta o padding do link */
+    }
+
+    li {
+        font-size: 16px; /* Diminui o tamanho da fonte das listas */
+    }
+
+    #titulo-frases {
+        margin-top: 40px; /* Ajusta a margem do título das frases */
+    }
+
+    .frase-e-foto {
+        flex-direction: column; /* Alinha a frase e a foto em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .autor-frase {
+        width: 120px; /* Ajusta o tamanho da foto do autor */
+        height: 120px; /* Ajusta o tamanho da foto do autor */
+    }
+}

@@ -6,6 +6,7 @@
     <title>Educação</title>
     <link rel="stylesheet" href="../css/educacao.css">
     <script src="../script/educacao.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -23,133 +24,117 @@
         </nav>
     </header>
     <main>
-        <h1 class="title-center">Dívidas e Juros</h1>
-        <div class="container">
-            <section class="info-box">
-                <p>
-                    <strong>Dívidas:</strong><br>
-                    Dívida é o dinheiro que uma pessoa ou empresa deve a outra parte. Pode surgir de empréstimos bancários, uso de cartões de crédito, financiamentos, entre outros. Existem diferentes tipos de dívidas:
-                    <br><br>
-                    <strong>Dívidas boas:</strong> São aquelas que podem trazer um retorno financeiro no futuro, como um financiamento estudantil ou de um imóvel.
-                    <br><strong>Dívidas ruins:</strong> São dívidas que não trazem nenhum benefício econômico, como gastar no cartão de crédito além das suas possibilidades.
-                </p>
-            </section>
-            <section class="info-box">
-                <p>
-                <strong>Matemática Financeira:</strong><br>
-                A matemática financeira realmente é uma ferramenta essencial para o cotidiano, tanto no âmbito pessoal quanto no corporativo. Ela oferece uma maneira de controlar melhor o dinheiro e tomar decisões mais conscientes, principalmente em operações que envolvem empréstimos, financiamentos e investimentos. <br>
+       <h2>Principais Conceitos de Matemática Financeira</h2>
+        <p>Domine os fundamentos que guiam suas decisões financeiras, desde o cálculo de juros até a análise de investimentos.</p>
 
-<br>            Através de conceitos como porcentagem, juros simples e compostos, valor presente e valor futuro, é possível prever o impacto de uma decisão financeira e avaliar o custo-benefício de diferentes alternativas.</p>
-            </section>
-            <section class="info-box">
-                <p>
-                    <strong>Juros:</strong><br>
-                    Os juros são a remuneração paga pelo uso de dinheiro emprestado, geralmente expresso em porcentagem.
-                    <br><br>
-                    <strong>Juros simples:</strong> Calculados apenas sobre o valor original da dívida (o principal). A fórmula é: J = P * i * t.
-                    <br><br>
-                    <strong>Juros compostos:</strong> Calculados sobre o valor da dívida que inclui os juros acumulados, mais comuns em empréstimos e cartões de crédito. A fórmula é: M = P (1 + i)^t.
-                </p>
-            </section>
-        </div>
-<div class="all">
-            <div class="quiz-container1">
-                <h1 id="quiztittle">Quiz sobre Dívidas e Juros</h1>
-                <form id="quiz-form-1">
-                    <div class="question">
-                        <p>1. O que são juros simples?</p>
-                        <input type="radio" id="q1a1" name="q1" value="a">
-                        <label for="q1a1">A) Juros que aumentam com o tempo</label><br>
-                        <input type="radio" id="q1a2" name="q1" value="b">
-                        <label for="q1a2">B) Juros calculados apenas sobre o valor inicial</label><br>
-                        <input type="radio" id="q1a3" name="q1" value="c">
-                        <label for="q1a3">C) Juros calculados sobre o valor total da dívida</label>
-                    </div>
-                    <div class="question">
-                        <p>2. Como é calculado o valor total de uma dívida com juros compostos?</p>
-                        <input type="radio" id="q2a1" name="q2" value="a">
-                        <label for="q2a1">A) Valor inicial + juros simples</label><br>
-                        <input type="radio" id="q2a2" name="q2" value="b">
-                        <label for="q2a2">B) Valor inicial + (valor inicial * taxa de juros)^n</label><br>
-                        <input type="radio" id="q2a3" name="q2" value="c">
-                        <label for="q2a3">C) Valor inicial * (1 + taxa de juros)^n</label>
-                    </div>
-                    <div class="question">
-                        <p>3. Qual é a fórmula para calcular os juros simples?</p>
-                        <input type="radio" id="q3a1" name="q3" value="a">
-                        <label for="q3a1">A) Juros = Capital * Taxa * Tempo</label><br>
-                        <input type="radio" id="q3a2" name="q3" value="b">
-                        <label for="q3a2">B) Juros = Capital / (1 + Taxa)^Tempo</label><br>
-                        <input type="radio" id="q3a3" name="q3" value="c">
-                        <label for="q3a3">C) Juros = Capital * (1 + Taxa)^Tempo</label>
-                    </div>
-                    <button type="button" onclick="checkAnswers('quiz-form-1', { q1: 'b', q2: 'c', q3: 'a' }, 'result-1')">Verificar Respostas</button>
-                </form>
-                <div id="result-1" class="result"></div>
+        <section class="financial-math">
+            <div class="card">
+                <i class="fas fa-chart-line fa-3x"></i>
+                <h3>Taxa de Juros</h3>
+                <p>É a porcentagem que indica o custo ou ganho sobre o capital em um determinado período de tempo. É uma forma de garantir ganho com investimentos ou igualar pagamentos parcelados</p>
             </div>
-            <div class="quiz-container">
-                <h1>Quiz de Matemática Financeira</h1>
-                <form id="quiz-form-2">
-                    <div class="question">
-                        <p>1. Qual é a fórmula para calcular os juros compostos?</p>
-                        <input type="radio" id="q1a1" name="q1" value="a">
-                        <label for="q1a1">A) Valor Futuro = Valor Presente * (1 + Taxa de Juros)^Período</label><br>
-                        <input type="radio" id="q1a2" name="q1" value="b">
-                        <label for="q1a2">B) Valor Futuro = Valor Presente * Taxa de Juros * Período</label><br>
-                        <input type="radio" id="q1a3" name="q1" value="c">
-                        <label for="q1a3">C) Valor Futuro = Valor Presente / (1 + Taxa de Juros)^Período</label>
-                    </div>
-                    <div class="question">
-                        <p>3. Qual é a fórmula para calcular os juros simples?</p>
-                        <input type="radio" id="q3a1" name="q3" value="a">
-                        <label for="q3a1">A) Juros = Capital * Taxa * Tempo</label><br>
-                        <input type="radio" id="q3a2" name="q3" value="b">
-                        <label for="q3a2">B) Juros = Capital * (1 + Taxa)^Tempo</label><br>
-                        <input type="radio" id="q3a3" name="q3" value="c">
-                        <label for="q3a3">C) Juros = Capital / (1 + Taxa * Tempo)</label>
-                    </div>
-                    <button type="button" onclick="checkAnswers('quiz-form-2', { q1: 'a', q2: 'b', q3: 'a', q4: 'b', q5: 'a' }, 'result-2')">Verificar Respostas</button>
-                </form>
-            <div id="result-2" class="result"></div>
-        </div>
-</div>    
-        <h4>VideoAulas</h4>
-        <section class="video-grid">
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/vxKV2UZkKm8" title="Conceitos Básicos - Matemática Financeira #1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <p>Aula 1: Introdução à Matemática Financeira</p>
+            <div class="card">
+                <i class="fas fa-calculator fa-3x"></i>
+                <h3>Juros Simples e Compostos</h3>
+                <p> Simples: Taxa de juros calculada apenas sobre o valor principal. Composta: Taxa de juros calculada sobre o valor principal mais os juros acumulados.</p>
             </div>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/iL574dWQ5Ew" title="Juros Simples - Matemática Financeira #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <p>Aula 2: Juros Simples</p>
+            <div class="card">
+                <i class="fas fa-hand-holding-usd fa-3x"></i>
+                <h3>Valor Presente</h3>
+                <p> Representa o valor atual de um montante que será recebido ou pago no futuro, descontado a uma taxa de juros apropriada. É essencial para calcular o valor de investimentos ou dívidas.</p>
             </div>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/-n8_IZbVAyw" title="Juros Compostos - Matemática Financeira #3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <p>Aula 3: Juros Compostos</p>
-            </div>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/f9pPuHbARVM" title="Valor Presente e Valor Futuro - Matemática Financeira - Aula 01 - Prof. Sandro Davidson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <p>Aula 4: Valor Presente e Valor Futuro</p>
-            </div>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/rn4-KXOqKdk" title="Matemática Financeira - Amortização" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <p>Aula 5: Amortização</p>
-            </div>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/7NT_g3Zk7EU" title="14   Análise de Investimentos VPL  TIR e TMA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <p>Aula 6: Análise de Investimentos</p>
+            <div class="card">
+                <i class="fas fa-balance-scale fa-3x"></i>
+                <h3>Valor Futuro</h3>
+                <p>Refere-se ao valor que um montante investido ou emprestado no presente terá em uma data futura, considerando a aplicação de juros ao longo do tempo. É o valor final do investimento</p>
             </div>
         </section>
         
-    <button id="backToTop" onclick="scrollToTop()"></button>
+        <section class="resources">
+            <h2>Nossos principais recursos de Matemática Financeira</h2>
+            <p>Domine os conceitos financeiros essenciais para gerir melhor o seu dinheiro</p>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <i class="fas fa-university fa-2x"></i>
+                    <div>
+                        <h4>Calculadora de Juros</h4>
+                        <p>Calcule o valor futuro de investimentos ou dívidas com base nos juros simples e compostos.</p>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-cubes fa-2x"></i>
+                    <div>
+                        <h4>Simulação de Empréstimos</h4>
+                        <p>Simule parcelas, prazos e taxas de juros para visualizar o custo total do seu empréstimo.</p>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-mobile-alt fa-2x"></i>
+                    <div>
+                        <h4>Historia</h4>
+                        <p>Apresentacao de algumas frases de pessoas famosas acerca do tema além de uma apresentação básica do assunto </p>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-credit-card fa-2x"></i>
+                    <div>
+                        <h4>Gestão de Dívidas</h4>
+                        <p>Acompanhe suas dívidas e veja como diferentes abordagens de pagamento podem ajudar a reduzir seus juros.</p>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-bullseye fa-2x"></i>
+                    <div>
+                        <h4>Simulação de Investimentos</h4>
+                        <p>Projete o retorno de seus investimentos ao longo do tempo, considerando diferentes taxas de rendimento.</p>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-users fa-2x"></i>
+                    <div>
+                        <h4>Educação Financeira</h4>
+                        <p>Aprenda os principais conceitos de matemática financeira e aplique-os no seu dia a dia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>      
+        <h2>Vídeo Aulas</h2>
+        <p>Materiais Online incríveis para aprimorar o seu conhecimento sobre os conceitos da matemática financeira</p>
+<section class="video-grid">
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/vxKV2UZkKm8" title="Conceitos Básicos - Matemática Financeira #1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/channel/UCZLyNRqqp2MeFuwuZdbGDJw?source_ve_path=MzY5MjU">Aula 1: Introdução à Matemática Financeira</a>
+    </div>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/iL574dWQ5Ew" title="Juros Simples - Matemática Financeira #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/channel/UCZLyNRqqp2MeFuwuZdbGDJw?source_ve_path=MzY5MjU">Aula 2: Juros Simples</a>
+    </div>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/-n8_IZbVAyw" title="Juros Compostos - Matemática Financeira #3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/channel/UCZLyNRqqp2MeFuwuZdbGDJw?source_ve_path=MzY5MjU">Aula 3: Juros Compostos</a>
+    </div>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/f9pPuHbARVM" title="Valor Presente e Valor Futuro - Matemática Financeira - Aula 01 - Prof. Sandro Davidson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/channel/UCW4HKlECOQAr9VshQrM85MQ?source_ve_path=MzY5MjU">Aula 4: Valor Presente e Valor Futuro</a>
+    </div>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/rn4-KXOqKdk" title="Matemática Financeira - Amortização" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/channel/UC_FQm8aivYBf2q6ga1rxklw">Aula 5: Amortização</a>
+    </div>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/7NT_g3Zk7EU" title="14   Análise de Investimentos VPL  TIR e TMA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/channel/UC8d_26PFgMujS_uCwGztCzQ">Aula 6: Análise de Investimentos</a>
+    </div>
+</section>
+</main>
 <footer>
-        <img src="../img/facebook.png" alt="">
-        <img src="../img/twitter.png" alt="">
-        <img src="../img/linkedin.png" alt="">
-        <img src="../img/instagram.png" alt="">
-        <img src="../img/youtube.png" alt="">
-
-        <p>Delevoped By SoftDev</p>
+    <img src="../img/facebook.png" alt="Facebook">
+    <img src="../img/twitter.png" alt="Twitter">
+    <img src="../img/linkedin.png" alt="LinkedIn">
+    <img src="../img/instagram.png" alt="Instagram">
+    <img src="../img/youtube.png" alt="YouTube">
+    <p>Developed By SoftDev</p>
 </footer>
+
 </body>
 </html>

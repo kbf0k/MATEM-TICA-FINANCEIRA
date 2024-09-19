@@ -14,14 +14,6 @@ body {
     overflow-x: hidden;
     position: relative;
 }
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
 main {
     min-height: calc(100vh - 60px); 
     flex: 1; 
@@ -35,27 +27,20 @@ header {
 
 nav {
     width: 100%;
-    height: 350px;
+    height: 200px;
     background: linear-gradient(180deg, #002553 60%, black);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
-    margin-top: 20px;
 }
 
 .logo img {
-    max-width: 150px;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.1);
+    margin-right: 35px;
+    max-width: 120px;
+    margin-top: 10px;
 }
 
 ul {
@@ -76,6 +61,7 @@ li a {
     font-size: 18px;
     font-weight: bold;
     transition: all ease-in-out 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 li a:hover {
@@ -85,44 +71,146 @@ li a:hover {
     transform: scale(1.10);
     transition: all ease-in-out 0.2s;
 }
+.financial-math {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-.title-center {
+.card {
+    width: 22%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card i {
+    color: #190aec;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #00bfa5;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+h2 {
+    color: #00bfa5;
+    text-align: center;
     margin-top: 40px;
 }
 
-/* Container para centralizar os quadrados */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.intro, .resources {
+    background-color: white;
+    margin: 20px auto;
     padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilizando os quadrados */
-.info-box {
-    background-color: #fff;
-    border: 2px solid #ccc;
-    padding: 20px;
-    width: 370px;
-    height: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.features, .resource-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature, .resource-item {
     text-align: center;
-    transition: background-color 0.3s ease;
-    font-size: 23px;
+    width: 30%;
 }
 
-.info-box:hover {
-    background-color: #ccc;
+.feature img, .resource-item img {
+    max-width: 80px;
+    margin-bottom: 10px;
 }
 
-/* Responsividade para dispositivos móveis */
+.cta-button {
+    display: block;
+    margin: 30px auto;
+    background-color: #00bfa5;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-button:hover {
+    background-color: #00796b;
+}
+.resources {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.resources h2 {
+    color: #00bfa5;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.resources p {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.resource-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.resource-item i {
+    color: #00bfa5;
+    margin-right: 20px;
+}
+
+.resource-item h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.resource-item p {
+    font-size: 17px;
+    color: #666;
+    line-height: 1.6;
+}
+
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -150,83 +238,57 @@ h4 {
     margin-bottom: 10px;
     margin-top: 40px;
 }
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px; 
+    grid-gap: 15px; /* Mantém o espaçamento entre colunas */
     padding: 20px;
-    margin-left: auto;
-    margin-right: 90px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .video {
-    aspect-ratio: 1 / 1; 
+    aspect-ratio: 1 / 1;
     overflow: hidden;
+    text-align: center;
+    margin-bottom: 15px; /* Espaçamento entre vídeos em linhas diferentes */
+    transition: transform 0.2s; /* Efeito suave ao passar o mouse */
 }
 
 .video:hover {
-    background-color: #002553;
-    height: 250px;
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
 }
+
 .video iframe {
     width: 100%;
     height: 200px;
+    margin-bottom: 10px;
 }
 
-.video p {
-    margin-top: 5px;
-    font-size: 16px;
-    color: #555;
+.video a {
+    display: block; /* Faz com que o link ocupe toda a área do vídeo */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: inherit; /* Herda a cor do texto do pai */
+    transition: transform 0.2s, box-shadow 0.2s; /* Suave ao passar o mouse */
+    font-size: 22px;
 }
 
 iframe {
     width: 100%;
-    height: 200px;
+    height: 100%; /* Altera a altura para ocupar o espaço do vídeo */
     border: none;
     border-radius: 4px;
 }
 
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff; /* Azul vibrante */
-    color: #fff;
-    border: none;
-    border-radius: 50%; /* Botão redondo */
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#backToTop:hover {
-    background-color: #0056b3; 
-    transform: scale(1.1); 
-}
-
-#backToTop:focus {
-    outline: none; 
-}
-
-#backToTop::before {
-    content: '▲';
-    font-size: 24px;
-}
-
 footer {
-    background-color: #002553;
-    color: white;
     text-align: center;
-    padding: 20px 0;
-    font-size: 16px;
-    width: 100%; /* O footer deve ocupar toda a largura da tela */
-    margin-top: auto; /* Garante que o footer fique no final da página */
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(360deg, #002553 45%, rgb(0, 0, 0));
+    border-top: 2px solid white;
 }
 
 footer img {
@@ -240,64 +302,96 @@ footer p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 12px;
 }
-
-.all {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin-top: 90px;
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.quiz-container {
-    background-color: #fff;
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+.financial-math, .resources {
+    background-color: white;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card, .resource-item {
+    text-align: center;
+    padding: 20px;
     margin: 10px;
 }
 
-.quiz-container1 {
+.card {
+    flex: 1;
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card i, .resource-item i {
+    color: #00bfa5;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    margin: 10px;
-    height: 100%;
 }
 
-h1 {
-    text-align: center;
+/* Media Queries para Responsividade */
+
+@media (max-width: 1200px) {
+    .financial-math, .resources {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .resource-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
 
-.question {
-    margin-bottom: 15px;
+@media (max-width: 768px) {
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .financial-math {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
 }
 
-label {
-    margin-left: 5px;
-}
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+    h2 {
+        font-size: 28px;
+    }
 
-button:hover {
-    background-color: #45a049;
-}
+    p {
+        font-size: 16px;
+    }
 
-.result {
-    margin-top: 20px;
+    #backToTop {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 }

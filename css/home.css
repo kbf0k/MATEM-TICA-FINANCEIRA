@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+#icone{
+    border-radius: 50%;
+}
 body {
     background: linear-gradient(to bottom, #002553, black);
     font-family: Poppins;
